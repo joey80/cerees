@@ -1,0 +1,16 @@
+.app {
+  &__cell {
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__container {
+    display: flex;
+  }
+}
