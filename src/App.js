@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
+import { Palette } from 'react-palette';
 import { getOMDBData } from './services/omdb.service';
-// import { Data2 } from './App.data2.js';
+// import { Data } from './App.data.js';
 import './App.scss';
 
 const App = () => {
@@ -14,15 +15,23 @@ const App = () => {
   };
 
   const init = async () => {
-    const search = await getOMDBData('todays special');
+    const search = await getOMDBData('the office');
     setData(search.results);
-    setPoster(search.poster);
-    FindTheMostEpisodes(search.results);
+    return search;
   };
 
   useEffect(() => {
-    init();
-  });
+    init().then((res) => {
+      setPoster(res.poster);
+      FindTheMostEpisodes(res.results);
+    });
+  }, []);
+
+  // useEffect(() => {
+  //   setData(Data.results);
+  //   setPoster(Data.poster);
+  //   FindTheMostEpisodes(Data.results);
+  // }, []);
 
   const RenderSeason = (num, obj) => {
     return (
@@ -124,13 +133,27 @@ const App = () => {
 
   if (data !== null) {
     return (
-      <div className='app'>
-        <img src={poster} alt='something dynamic' className='app__image' />
-        <RenderApp2 />
-        <div className='app__debugger'>
-          <RenderApp />
-        </div>
-      </div>
+      <Palette src={poster}>
+        {({ data, loading, error }) => (
+          <div
+            className='app'
+            style={{
+              '--dominant-color': data.vibrant,
+            }}
+          >
+            <div className='app__header'>
+              <div className='app__image__container'>
+                <div className='app__image' style={{ backgroundImage: `url(${poster})` }} />
+                {/* <img src={poster} alt='something dynamic' className='app__image' /> */}
+              </div>
+              <RenderApp2 />
+            </div>
+            <div className='app__debugger'>
+              <RenderApp />
+            </div>
+          </div>
+        )}
+      </Palette>
     );
   }
 

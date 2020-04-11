@@ -33,11 +33,15 @@ export const getOMDBData = async (query) => {
     const totalSeasons = result.data.totalSeasons;
     const posterImage = result.data.Poster;
 
-    for (let i = 0; i < totalSeasons; i++) {
+    for (let i = 0; i < totalSeasons && results.length <= totalSeasons; i++) {
       const data = await getSeasonData(encodedQuery, i + 1);
       results.push(data);
     }
 
+    console.log({
+      results,
+      poster: posterImage,
+    });
     return {
       results,
       poster: posterImage,
