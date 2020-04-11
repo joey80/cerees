@@ -36,27 +36,22 @@ const App = () => {
 
   const RenderCellColor = (num) => {
     const rating = Number(num);
-    // Great - green - 8.6 up
-    // Good - yellow - 7.6 up
-    // Regular - orange - 6.6 up
-    // Bad - red - 5.0 up
-    // Garbage - blue - 4.9 down
     if (rating >= 8.6) {
-      return 'green';
+      return 'great';
     }
     if (rating >= 7.6 && rating <= 8.5) {
-      return 'yellow';
+      return 'good';
     }
     if (rating >= 6.6 && rating <= 7.5) {
-      return 'orange';
+      return 'regular';
     }
     if (rating >= 5.0 && rating <= 6.5) {
-      return 'red';
+      return 'bad';
     }
     if (rating <= 4.9) {
-      return 'blue';
+      return 'garbage';
     }
-    return null;
+    return 'default';
   };
 
   const RenderBlankCells = (raw) => {
@@ -121,15 +116,16 @@ const App = () => {
         {Data.map((elm, index) => {
           return RenderSeason2(elm, index);
         })}
-        ;
       </div>
     </div>
   );
 
   return (
-    <div className='App'>
+    <div className='app'>
       <RenderApp2 />
-      <RenderApp />
+      <div className='app__debugger'>
+        <RenderApp />
+      </div>
     </div>
   );
 };
