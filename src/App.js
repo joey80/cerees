@@ -1,26 +1,28 @@
 import React, { Fragment, useEffect, useState } from 'react';
-// import { getOMDBData } from './services/omdb.service';
-import { Data } from './App.data.js';
+import { getOMDBData } from './services/omdb.service';
+// import { Data2 } from './App.data2.js';
 import './App.scss';
 
 const App = () => {
   const [mostEpisodes, setMostEpisodes] = useState(null);
+  const [data, setData] = useState(null);
+  const [poster, setPoster] = useState(null);
 
-  const FindTheMostEpisodes = () => {
-    const longest = Data.reduce((p, c, i, a) => (a[p].length > c.length ? p : i), 0);
-    return setMostEpisodes(Data[longest].length);
+  const FindTheMostEpisodes = (arr) => {
+    const longest = arr.reduce((p, c, i, a) => (a[p].length > c.length ? p : i), 0);
+    return setMostEpisodes(arr[longest].length);
+  };
+
+  const init = async () => {
+    const search = await getOMDBData('todays special');
+    setData(search.results);
+    setPoster(search.poster);
+    FindTheMostEpisodes(search.results);
   };
 
   useEffect(() => {
-    FindTheMostEpisodes();
+    init();
   });
-
-  // const init = async () => {
-  //   const search = await getOMDBData('the simpsons');
-  //   console.log('the simpsons', search);
-  // };
-
-  // init();
 
   const RenderSeason = (num, obj) => {
     return (
@@ -83,7 +85,7 @@ const App = () => {
   };
 
   const RenderApp = () =>
-    Data.map((elm, index) => {
+    data.map((elm, index) => {
       return RenderSeason(index + 1, elm);
     });
 
@@ -99,8 +101,8 @@ const App = () => {
 
   const RenderSeasonRow = () => (
     <div className='app__column app__column--key'>
-      <div className='app__cell app__cell--spacer' />
-      {Array.from(Array(Data.length)).map((x, idx) => (
+      <div className='app__cell app__cell--key' />
+      {Array.from(Array(data.length)).map((x, idx) => (
         <div className='app__cell app__cell--key' key={idx}>
           {idx + 1}
         </div>
@@ -113,21 +115,26 @@ const App = () => {
       <RenderSeasonRow />
       <div className='app__container__inner'>
         <RenderEpisodeColumn />
-        {Data.map((elm, index) => {
+        {data.map((elm, index) => {
           return RenderSeason2(elm, index);
         })}
       </div>
     </div>
   );
 
-  return (
-    <div className='app'>
-      <RenderApp2 />
-      <div className='app__debugger'>
-        <RenderApp />
+  if (data !== null) {
+    return (
+      <div className='app'>
+        <img src={poster} alt='something dynamic' className='app__image' />
+        <RenderApp2 />
+        <div className='app__debugger'>
+          <RenderApp />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  return 'LOADING';
 };
 
 export default App;
