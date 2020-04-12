@@ -1,5 +1,6 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Palette } from 'react-palette';
+import Input from './components/Input/Input';
 import { getOMDBData } from './services/omdb.service';
 // import { Data } from './App.data.js';
 import './App.scss';
@@ -14,18 +15,27 @@ const App = () => {
     return setMostEpisodes(arr[longest].length);
   };
 
-  const init = async () => {
-    const search = await getOMDBData('the office');
+  const init = async (term) => {
+    const search = await getOMDBData(term);
     setData(search.results);
     return search;
   };
 
-  useEffect(() => {
-    init().then((res) => {
+  const start = async (term) => {
+    init(term).then((res) => {
       setPoster(res.poster);
       FindTheMostEpisodes(res.results);
     });
-  }, []);
+  };
+
+  // useEffect(() => {
+  //   if (searchTerm) {
+  //     init().then((res) => {
+  //       setPoster(res.poster);
+  //       FindTheMostEpisodes(res.results);
+  //     });
+  //   }
+  // }, []);
 
   // useEffect(() => {
   //   setData(Data.results);
@@ -143,6 +153,7 @@ const App = () => {
           >
             <div className='app__header'>
               <div className='app__image__container'>
+                <Input onSearchChange={start} />
                 <div className='app__image' style={{ backgroundImage: `url(${poster})` }} />
                 {/* <img src={poster} alt='something dynamic' className='app__image' /> */}
               </div>
@@ -157,7 +168,7 @@ const App = () => {
     );
   }
 
-  return 'LOADING';
+  return <Input onSearchChange={start} />;
 };
 
 export default App;
