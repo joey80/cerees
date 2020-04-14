@@ -9,11 +9,21 @@ const App = () => {
   const [mostEpisodes, setMostEpisodes] = useState(null);
   const [data, setData] = useState(null);
   const [poster, setPoster] = useState(null);
+  const [seasonAverages, setSeasonAverages] = useState([]);
 
   const FindTheMostEpisodes = (arr) => {
     const longest = arr.reduce((p, c, i, a) => (a[p].length > c.length ? p : i), 0);
     return setMostEpisodes(arr[longest].length);
   };
+
+  const GetTheSeasonAverages = (arr) => {
+    const results = [];
+    arr.map(elm => {
+      const avg = elm.reduce((r, c) => r + Number(c.imdbRating), 0) / elm.length;
+      results.push(avg)
+    })
+    return results;
+  }
 
   const init = async (term) => {
     const search = await getOMDBData(term);
@@ -25,6 +35,10 @@ const App = () => {
     init(term).then((res) => {
       setPoster(res.poster);
       FindTheMostEpisodes(res.results);
+      const averages = GetTheSeasonAverages(res.results);
+
+      setSeasonAverages(averages);
+      console.log('averages', averages);
     });
   };
 
