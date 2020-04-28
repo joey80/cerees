@@ -6,6 +6,7 @@ import { getOMDBData } from './services/omdb.service';
 import './App.scss';
 
 const App = () => {
+  const [loading, setLoading] = useState(null);
   const [mostEpisodes, setMostEpisodes] = useState(null);
   const [data, setData] = useState(null);
   const [poster, setPoster] = useState(null);
@@ -18,14 +19,15 @@ const App = () => {
 
   const GetTheSeasonAverages = (arr) => {
     const results = [];
-    arr.map(elm => {
+    arr.map((elm) => {
       const avg = elm.reduce((r, c) => r + Number(c.imdbRating), 0) / elm.length;
-      results.push(avg)
-    })
+      results.push(avg);
+    });
     return results;
-  }
+  };
 
   const init = async (term) => {
+    setLoading(true);
     const search = await getOMDBData(term);
     setData(search.results);
     return search;
@@ -39,6 +41,7 @@ const App = () => {
 
       setSeasonAverages(averages);
       console.log('averages', averages);
+      setLoading(false);
     });
   };
 
@@ -155,7 +158,7 @@ const App = () => {
     </div>
   );
 
-  if (data !== null) {
+  if (data !== null && loading === false) {
     return (
       <Palette src={poster}>
         {({ data, loading, error }) => (
@@ -180,6 +183,8 @@ const App = () => {
         )}
       </Palette>
     );
+  } else if (loading) {
+    return <span>Loading results</span>;
   }
 
   return <Input onSearchChange={start} />;
