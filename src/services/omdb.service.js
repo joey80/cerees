@@ -8,7 +8,7 @@ import axios from 'axios';
 const getSeasonData = async (query, season) => {
   const omdbKey = `&apikey=${process.env.REACT_APP_OMDB_API}`;
   const omdbSeason = `&season=${season}`;
-  const omdbEndpoint = `http://www.omdbapi.com/?t=${query}${omdbSeason}&plot=full${omdbKey}`;
+  const omdbEndpoint = `https://www.omdbapi.com/?t=${query}${omdbSeason}&plot=full${omdbKey}`;
 
   try {
     const result = await axios.get(omdbEndpoint);
@@ -25,7 +25,7 @@ const getSeasonData = async (query, season) => {
 export const getOMDBData = async (query) => {
   const encodedQuery = encodeURIComponent(query);
   const omdbKey = process.env.REACT_APP_OMDB_API;
-  const omdbEndpoint = `http://www.omdbapi.com/?t=${encodedQuery}&type=series&plot=full&apikey=${omdbKey}`;
+  const omdbEndpoint = `https://www.omdbapi.com/?t=${encodedQuery}&type=series&plot=full&apikey=${omdbKey}`;
 
   try {
     const results = [];
@@ -55,7 +55,7 @@ export const getOMDBData = async (query) => {
 //   // search type needs to be a series
 //   const encodedQuery = encodeURIComponent(query);
 //   const omdbKey = process.env.REACT_APP_OMDB_API;
-//   const omdbEndpoint = `http://www.omdbapi.com/?s=${encodedQuery}&plot=full&apikey=${omdbKey}`;
+//   const omdbEndpoint = `https://www.omdbapi.com/?s=${encodedQuery}&plot=full&apikey=${omdbKey}`;
 
 //   try {
 //     const results = [];
