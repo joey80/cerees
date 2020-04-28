@@ -1,28 +1,23 @@
 name: Release
-
 on:
   push:
     branches:
-      - master
-
+      - release
 jobs:
-  prepare:
-    runs-on: ubuntu-latest
-    if: "! contains(github.event.head_commit.message, '[skip ci]')"
+  release:
+    name: Release
+    runs-on: ubuntu-18.04
     steps:
-      - run: echo "${{ github.event.head_commit.message }}"
-
-  publish:
-    needs: prepare
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://registry.npmjs.org
-      - run: npm install
-      - run: npm run build
-      - run: npx semantic-release
+      - name: Install dependencies
+        run: npm ci
+      - name: Release
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
