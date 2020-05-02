@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Palette } from 'react-palette';
 import Input from './components/Input/Input';
+import Loader from './components/Loader/Loader';
 import { getOMDBData } from './services/omdb.service';
 // import { Data } from './App.data.js';
 import './App.scss';
@@ -184,7 +185,7 @@ const App = () => {
       </Palette>
     );
   } else if (loading) {
-    return <span>Loading results</span>;
+    return <Loader />;
   }
 
   return <Input onSearchChange={start} />;
