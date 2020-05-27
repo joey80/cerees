@@ -16,6 +16,7 @@
 - add static content to reduce api calls
 - query static content first before making call
 - fix season average NaN bug
+- look into season data being undefined (snl)
 
 ## 1.2 - epic/sidebar
 
