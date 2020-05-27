@@ -14,15 +14,16 @@ const App = () => {
   const [seasonAverages, setSeasonAverages] = useState([]);
 
   const FindTheMostEpisodes = (arr) => {
-    const longest = arr.reduce((p, c, i, a) => (a[p].length > c.length ? p : i), 0);
+    const longest = arr.reduce((p, c, i, a) => (c && a[p].length > c.length ? p : i), 0);
     return setMostEpisodes(arr[longest].length);
   };
 
   const GetTheSeasonAverages = (arr) => {
     const results = [];
     arr.map((elm) => {
+      console.log(elm);
       const avg = elm.reduce((r, c) => r + Number(c.imdbRating), 0) / elm.length;
-      results.push(avg);
+      return results.push(avg);
     });
     return results;
   };
@@ -41,7 +42,6 @@ const App = () => {
       const averages = GetTheSeasonAverages(res.results);
 
       setSeasonAverages(averages);
-      console.log('averages', averages);
       setLoading(false);
     });
   };

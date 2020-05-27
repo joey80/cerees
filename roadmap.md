@@ -11,6 +11,12 @@
 
 - DONE - add loader component
 
+## 1.1.2 - feature/static
+
+- add static content to reduce api calls
+- query static content first before making call
+- fix season average NaN bug
+
 ## 1.2 - epic/sidebar
 
 - better design for the image
