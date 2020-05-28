@@ -1,18 +1,14 @@
 import { data as simpsonsData } from './shows/simpsons';
+import { data as twentyFour } from './shows/24';
+import { data as thirtyRock } from './shows/30Rock';
+import { data as alias } from './shows/alias';
+import { data as allInTheFamilyData } from './shows/allInTheFamily';
+import { data as americansData } from './shows/americans';
+import { data as archerData } from './shows/archer';
+import { data as arrestedDevelopmentData } from './shows/arrestedDevelopment';
+import { data as avatarData } from './shows/avatar';
+import { data as beavisAndButtheadData } from './shows/beavisAndButthead';
 
-// 24
-// 30 rock
-// alfred hitchcock presents
-// alias
-// all in the family
-// the americans
-// archer
-// arrested development
-// avatar: the last airbender
-// band of brothers
-// batman: the animated series
-// battlestar galactica
-// beavis and butthead
 // better call saul
 // boardwalk empire
 // bojack horseman
@@ -110,6 +106,42 @@ import { data as simpsonsData } from './shows/simpsons';
 // the x-files
 
 export const data = {
+  '24': {
+    ...twentyFour,
+  },
+  '30 Rock': {
+    ...thirtyRock,
+  },
+  alias: {
+    ...alias,
+  },
+  'all in the family': {
+    ...allInTheFamilyData,
+  },
+  americans: {
+    ...americansData,
+  },
+  archer: {
+    ...archerData,
+  },
+  'arrested development': {
+    ...arrestedDevelopmentData,
+  },
+  avatar: {
+    ...avatarData,
+  },
+  'avatar: the last airbender': {
+    ...avatarData,
+  },
+  'beavis and butthead': {
+    ...beavisAndButtheadData,
+  },
+  'beavis and butt-head': {
+    ...beavisAndButtheadData,
+  },
+  'the americans': {
+    ...americansData,
+  },
   'the simpsons': {
     ...simpsonsData,
   },

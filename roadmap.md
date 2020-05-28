@@ -14,7 +14,7 @@
 ## 1.1.2 - feature/static
 
 - add static content to reduce api calls
-- query static content first before making call
+- DONE - query static content first before making call
 - fix season average NaN bug
 - look into season data being undefined (snl)
 

@@ -3,7 +3,8 @@ import { Palette } from 'react-palette';
 import Input from './components/Input/Input';
 import Loader from './components/Loader/Loader';
 import { getOMDBData } from './services/omdb.service';
-// import { Data } from './App.data.js';
+import { getStaticData } from './services/static.service';
+// import { data as staticData } from './services/static/static';
 import './App.scss';
 
 const App = () => {
@@ -12,6 +13,8 @@ const App = () => {
   const [data, setData] = useState(null);
   const [poster, setPoster] = useState(null);
   const [seasonAverages, setSeasonAverages] = useState([]);
+
+  // console.log('data', staticData);
 
   const FindTheMostEpisodes = (arr) => {
     const longest = arr.reduce((p, c, i, a) => (a[p].length > c.length ? p : i), 0);
@@ -29,9 +32,15 @@ const App = () => {
 
   const init = async (term) => {
     setLoading(true);
-    const search = await getOMDBData(term);
-    setData(search.results);
-    return search;
+    const staticData = getStaticData(term);
+    if (staticData) {
+      setData(staticData.results);
+      return staticData;
+    } else {
+      const search = await getOMDBData(term);
+      setData(search.results);
+      return search;
+    }
   };
 
   const start = async (term) => {

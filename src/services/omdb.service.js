@@ -39,6 +39,9 @@ export const getOMDBData = async (query) => {
         results.push(data);
       }
     }
+
+    console.log({ results, poster: posterImage });
+
     return {
       results,
       poster: posterImage,
