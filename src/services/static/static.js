@@ -8,10 +8,9 @@ import { data as archerData } from './shows/archer';
 import { data as arrestedDevelopmentData } from './shows/arrestedDevelopment';
 import { data as avatarData } from './shows/avatar';
 import { data as beavisAndButtheadData } from './shows/beavisAndButthead';
+import { data as betterCallSaulData } from './shows/betterCallSaul';
+import { data as bojackHorsemanData } from './shows/bojackHorseman';
 
-// better call saul
-// boardwalk empire
-// bojack horseman
 // breaking bad
 // brooklyn nine-nine
 // buffy the vampire slayer
@@ -138,6 +137,12 @@ export const data = {
   },
   'beavis and butt-head': {
     ...beavisAndButtheadData,
+  },
+  'better call saul': {
+    ...betterCallSaulData,
+  },
+  'bojack horseman': {
+    ...bojackHorsemanData,
   },
   'the americans': {
     ...americansData,
