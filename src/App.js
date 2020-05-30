@@ -34,9 +34,11 @@ const App = () => {
     setLoading(true);
     const staticData = getStaticData(term);
     if (staticData) {
+      console.log('static');
       setData(staticData.results);
       return staticData;
     } else {
+      console.log('api');
       const search = await getOMDBData(term);
       setData(search.results);
       return search;
