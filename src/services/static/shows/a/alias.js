@@ -2,6 +2,20 @@ export const alias = {
   results: [
     [
       {
+        Title: 'Truth Be Told',
+        Released: '2001-09-30',
+        Episode: '1',
+        imdbRating: '8.4',
+        imdbID: 'tt0508672',
+      },
+      {
+        Title: 'So It Begins',
+        Released: '2001-10-07',
+        Episode: '2',
+        imdbRating: '7.8',
+        imdbID: 'tt0508643',
+      },
+      {
         Title: 'Parity',
         Released: '2001-10-14',
         Episode: '3',
@@ -55,6 +69,13 @@ export const alias = {
         Released: '2001-12-16',
         Episode: '10',
         imdbRating: '7.9',
+        imdbID: 'tt0508652',
+      },
+      {
+        Title: 'The Confession',
+        Released: '2002-01-06',
+        Episode: '11',
+        imdbRating: '7.9',
         imdbID: 'tt0508645',
       },
       {
@@ -70,6 +91,13 @@ export const alias = {
         Episode: '13',
         imdbRating: '8.4',
         imdbID: 'tt0508651',
+      },
+      {
+        Title: 'The Coup',
+        Released: '2002-02-24',
+        Episode: '14',
+        imdbRating: '7.1',
+        imdbID: 'tt0508654',
       },
       {
         Title: 'Page 47',
@@ -106,8 +134,36 @@ export const alias = {
         imdbRating: '7.7',
         imdbID: 'tt0508642',
       },
+      {
+        Title: 'The Solution',
+        Released: '2002-04-21',
+        Episode: '20',
+        imdbRating: '7.4',
+        imdbID: 'tt0508667',
+      },
+      {
+        Title: 'Rendezvous',
+        Released: '2002-05-05',
+        Episode: '21',
+        imdbRating: '7.8',
+        imdbID: 'tt0508634',
+      },
+      {
+        Title: 'Almost Thirty Years',
+        Released: '2002-05-12',
+        Episode: '22',
+        imdbRating: '8.1',
+        imdbID: 'tt0508588',
+      },
     ],
     [
+      {
+        Title: 'The Enemy Walks In',
+        Released: '2002-09-29',
+        Episode: '1',
+        imdbRating: '7.5',
+        imdbID: 'tt0508656',
+      },
       {
         Title: 'Trust Me',
         Released: '2002-10-06',
@@ -121,6 +177,34 @@ export const alias = {
         Episode: '3',
         imdbRating: '7.0',
         imdbID: 'tt0508597',
+      },
+      {
+        Title: 'Dead Drop',
+        Released: '2002-10-20',
+        Episode: '4',
+        imdbRating: '6.9',
+        imdbID: 'tt0508602',
+      },
+      {
+        Title: 'The Indicator',
+        Released: '2002-10-27',
+        Episode: '5',
+        imdbRating: '7.2',
+        imdbID: 'tt0508661',
+      },
+      {
+        Title: 'Salvation',
+        Released: '2002-11-10',
+        Episode: '6',
+        imdbRating: '7.0',
+        imdbID: 'tt0508639',
+      },
+      {
+        Title: 'The Counteragent',
+        Released: '2002-11-17',
+        Episode: '7',
+        imdbRating: '7.3',
+        imdbID: 'tt0508653',
       },
       {
         Title: 'Passage: Part 1',
@@ -144,6 +228,13 @@ export const alias = {
         imdbID: 'tt0508648',
       },
       {
+        Title: 'A Higher Echelon',
+        Released: '2003-01-05',
+        Episode: '11',
+        imdbRating: '7.3',
+        imdbID: 'tt0508584',
+      },
+      {
         Title: 'The Getaway',
         Released: '2003-01-12',
         Episode: '12',
@@ -165,11 +256,25 @@ export const alias = {
         imdbID: 'tt0508605',
       },
       {
+        Title: 'A Free Agent',
+        Released: '2003-02-09',
+        Episode: '15',
+        imdbRating: '7.1',
+        imdbID: 'tt0508583',
+      },
+      {
         Title: 'Firebomb',
         Released: '2003-02-23',
         Episode: '16',
         imdbRating: '7.1',
         imdbID: 'tt0508610',
+      },
+      {
+        Title: 'A Dark Turn',
+        Released: '2003-03-02',
+        Episode: '17',
+        imdbRating: '7.2',
+        imdbID: 'tt0508582',
       },
       {
         Title: 'Truth Takes Time',
@@ -191,6 +296,20 @@ export const alias = {
         Episode: '20',
         imdbRating: '7.0',
         imdbID: 'tt0508600',
+      },
+      {
+        Title: 'Second Double',
+        Released: '2003-05-04',
+        Episode: '21',
+        imdbRating: '7.4',
+        imdbID: 'tt0508641',
+      },
+      {
+        Title: 'The Telling',
+        Released: '2003-05-04',
+        Episode: '22',
+        imdbRating: '8.2',
+        imdbID: 'tt0508668',
       },
     ],
     [
@@ -214,6 +333,13 @@ export const alias = {
         Episode: '3',
         imdbRating: '6.8',
         imdbID: 'tt0508637',
+      },
+      {
+        Title: 'A Missing Link',
+        Released: '2003-10-19',
+        Episode: '4',
+        imdbRating: '7.1',
+        imdbID: 'tt0508586',
       },
       {
         Title: 'Repercussions',
@@ -242,6 +368,13 @@ export const alias = {
         Episode: '8',
         imdbRating: '7.5',
         imdbID: 'tt0508596',
+      },
+      {
+        Title: 'Conscious',
+        Released: '2003-11-30',
+        Episode: '9',
+        imdbRating: '7.5',
+        imdbID: 'tt0508599',
       },
       {
         Title: 'Remnants',
@@ -300,6 +433,13 @@ export const alias = {
         imdbID: 'tt0508657',
       },
       {
+        Title: 'Unveiled',
+        Released: '2004-04-11',
+        Episode: '18',
+        imdbRating: '7.2',
+        imdbID: 'tt0508675',
+      },
+      {
         Title: 'Hourglass',
         Released: '2004-04-18',
         Episode: '19',
@@ -312,6 +452,13 @@ export const alias = {
         Episode: '20',
         imdbRating: '7.5',
         imdbID: 'tt0508593',
+      },
+      {
+        Title: 'Legacy',
+        Released: '2004-05-02',
+        Episode: '21',
+        imdbRating: '7.2',
+        imdbID: 'tt0508615',
       },
     ],
     [
@@ -479,6 +626,13 @@ export const alias = {
         imdbID: 'tt0508630',
       },
       {
+        Title: '... 1 ...',
+        Released: '2005-10-06',
+        Episode: '2',
+        imdbRating: '7.2',
+        imdbID: 'tt0508579',
+      },
+      {
         Title: 'The Shed',
         Released: '2005-10-13',
         Episode: '3',
@@ -526,6 +680,13 @@ export const alias = {
         Episode: '9',
         imdbRating: '7.9',
         imdbID: 'tt0508659',
+      },
+      {
+        Title: 'S.O.S.',
+        Released: '2006-04-19',
+        Episode: '10',
+        imdbRating: '7.8',
+        imdbID: 'tt0508638',
       },
       {
         Title: 'Maternal Instinct',

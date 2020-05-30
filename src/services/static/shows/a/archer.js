@@ -9,6 +9,13 @@ export const archer = {
         imdbID: 'tt5475880',
       },
       {
+        Title: 'Mole Hunt',
+        Released: '2009-09-17',
+        Episode: '1',
+        imdbRating: '7.8',
+        imdbID: 'tt1539157',
+      },
+      {
         Title: 'Training Day',
         Released: '2010-01-14',
         Episode: '2',
@@ -28,6 +35,13 @@ export const archer = {
         Episode: '4',
         imdbRating: '7.7',
         imdbID: 'tt1577178',
+      },
+      {
+        Title: 'Honeypot',
+        Released: '2010-02-04',
+        Episode: '5',
+        imdbRating: '8.0',
+        imdbID: 'tt1598645',
       },
       {
         Title: 'Skorpio',
@@ -188,6 +202,13 @@ export const archer = {
         imdbID: 'tt2158993',
       },
       {
+        Title: 'El Contador',
+        Released: '2012-01-26',
+        Episode: '5',
+        imdbRating: '8.1',
+        imdbID: 'tt2202719',
+      },
+      {
         Title: 'The Limited',
         Released: '2012-02-02',
         Episode: '6',
@@ -246,6 +267,13 @@ export const archer = {
     ],
     [
       {
+        Title: 'Fugue and Riffs',
+        Released: '2013-01-17',
+        Episode: '1',
+        imdbRating: '8.3',
+        imdbID: 'tt2342483',
+      },
+      {
         Title: 'The Wind Cries Mary',
         Released: '2013-01-24',
         Episode: '2',
@@ -260,11 +288,32 @@ export const archer = {
         imdbID: 'tt2633154',
       },
       {
+        Title: 'Midnight Ron',
+        Released: '2013-02-07',
+        Episode: '4',
+        imdbRating: '7.7',
+        imdbID: 'tt2633156',
+      },
+      {
         Title: 'Viscous Coupling',
         Released: '2013-02-14',
         Episode: '5',
         imdbRating: '7.6',
         imdbID: 'tt2665242',
+      },
+      {
+        Title: 'Once Bitten',
+        Released: '2013-02-21',
+        Episode: '6',
+        imdbRating: '7.6',
+        imdbID: 'tt2665238',
+      },
+      {
+        Title: 'Live and Let Dine',
+        Released: '2013-02-28',
+        Episode: '7',
+        imdbRating: '7.9',
+        imdbID: 'tt2665250',
       },
       {
         Title: 'Coyote Lovely',
@@ -294,6 +343,20 @@ export const archer = {
         imdbRating: '7.9',
         imdbID: 'tt2665268',
       },
+      {
+        Title: 'Sea Tunt: Part 1',
+        Released: '2013-04-04',
+        Episode: '12',
+        imdbRating: '7.7',
+        imdbID: 'tt2665270',
+      },
+      {
+        Title: 'Sea Tunt: Part 2',
+        Released: '2013-04-11',
+        Episode: '13',
+        imdbRating: '8.0',
+        imdbID: 'tt2665274',
+      },
     ],
     [
       {
@@ -311,6 +374,13 @@ export const archer = {
         imdbID: 'tt3411622',
       },
       {
+        Title: 'Archer Vice: A Debt of Honor',
+        Released: '2014-01-27',
+        Episode: '3',
+        imdbRating: '7.8',
+        imdbID: 'tt3411616',
+      },
+      {
         Title: 'Archer Vice: House Call',
         Released: '2014-02-03',
         Episode: '4',
@@ -323,6 +393,20 @@ export const archer = {
         Episode: '5',
         imdbRating: '7.7',
         imdbID: 'tt3411628',
+      },
+      {
+        Title: 'Archer Vice: Baby Shower',
+        Released: '2014-03-03',
+        Episode: '6',
+        imdbRating: '7.8',
+        imdbID: 'tt3411630',
+      },
+      {
+        Title: "Archer Vice: Smugglers' Blues",
+        Released: '2014-03-10',
+        Episode: '7',
+        imdbRating: '7.9',
+        imdbID: 'tt3411634',
       },
       {
         Title: 'Archer Vice: The Rules of Extraction',
@@ -397,6 +481,20 @@ export const archer = {
         imdbID: 'tt4327042',
       },
       {
+        Title: 'Vision Quest',
+        Released: '2015-02-05',
+        Episode: '5',
+        imdbRating: '8.7',
+        imdbID: 'tt4389446',
+      },
+      {
+        Title: 'Sitting',
+        Released: '2015-02-12',
+        Episode: '6',
+        imdbRating: '8.0',
+        imdbID: 'tt4389450',
+      },
+      {
         Title: 'Nellis',
         Released: '2015-02-19',
         Episode: '7',
@@ -430,6 +528,13 @@ export const archer = {
         Episode: '11',
         imdbRating: '8.1',
         imdbID: 'tt4441418',
+      },
+      {
+        Title: 'Drastic Voyage: Part 1',
+        Released: '2015-03-26',
+        Episode: '12',
+        imdbRating: '8.1',
+        imdbID: 'tt4441444',
       },
       {
         Title: 'Drastic Voyage: Part 2',
@@ -510,29 +615,15 @@ export const archer = {
         imdbRating: '8.9',
         imdbID: 'tt4537958',
       },
-      {
-        Title: 'Episode #7.11',
-        Released: 'N/A',
-        Episode: '11',
-        imdbRating: 'N/A',
-        imdbID: 'tt4537962',
-      },
-      {
-        Title: 'Episode #7.12',
-        Released: 'N/A',
-        Episode: '12',
-        imdbRating: 'N/A',
-        imdbID: 'tt4537966',
-      },
-      {
-        Title: 'Episode #7.13',
-        Released: 'N/A',
-        Episode: '13',
-        imdbRating: 'N/A',
-        imdbID: 'tt4537970',
-      },
     ],
     [
+      {
+        Title: 'Archer Dreamland: No Good Deed',
+        Released: '2017-04-05',
+        Episode: '1',
+        imdbRating: '7.8',
+        imdbID: 'tt5825432',
+      },
       {
         Title: 'Archer Dreamland: Berenice',
         Released: '2017-04-12',
@@ -592,11 +683,25 @@ export const archer = {
         imdbID: 'tt5825434',
       },
       {
+        Title: 'Danger Island: Disheartening',
+        Released: '2018-05-02',
+        Episode: '2',
+        imdbRating: '7.2',
+        imdbID: 'tt7576226',
+      },
+      {
         Title: 'Danger Island: Different Modes of Preparing the Fruit',
         Released: '2018-05-09',
         Episode: '3',
         imdbRating: '7.1',
         imdbID: 'tt7576230',
+      },
+      {
+        Title: 'Danger Island: A Warrior in Costume',
+        Released: '2018-05-16',
+        Episode: '4',
+        imdbRating: '7.3',
+        imdbID: 'tt7576234',
       },
       {
         Title: 'Danger Island: Strange Doings in the Taboo Groves',
@@ -609,7 +714,7 @@ export const archer = {
         Title: 'Danger Island: Some Remarks on Cannibalism',
         Released: '2018-05-30',
         Episode: '6',
-        imdbRating: 'N/A',
+        imdbRating: '7.3',
         imdbID: 'tt7576238',
       },
       {
@@ -620,10 +725,10 @@ export const archer = {
         imdbID: 'tt7576240',
       },
       {
-        Title: 'Episode #9.8',
-        Released: 'N/A',
+        Title: 'Danger Island: A Discovery',
+        Released: '2018-06-13',
         Episode: '8',
-        imdbRating: 'N/A',
+        imdbRating: '7.7',
         imdbID: 'tt6111142',
       },
     ],
