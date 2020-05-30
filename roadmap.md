@@ -16,7 +16,8 @@
 - add static content to reduce api calls
 - DONE - query static content first before making call
 - fix season average NaN bug
-- look into season data being undefined (snl)
+- look into season data being undefined (snl, chapelles show)
+- fill in missing episodes in static data
 
 ## 1.2 - epic/sidebar
 
