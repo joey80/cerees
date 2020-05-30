@@ -1,25 +1,23 @@
-import { data as simpsonsData } from './shows/simpsons';
-import { data as twentyFour } from './shows/24';
-import { data as thirtyRock } from './shows/30Rock';
-import { data as alias } from './shows/alias';
-import { data as allInTheFamilyData } from './shows/allInTheFamily';
-import { data as americansData } from './shows/americans';
-import { data as archerData } from './shows/archer';
-import { data as arrestedDevelopmentData } from './shows/arrestedDevelopment';
-import { data as avatarData } from './shows/avatar';
-import { data as beavisAndButtheadData } from './shows/beavisAndButthead';
-import { data as betterCallSaulData } from './shows/betterCallSaul';
-import { data as bojackHorsemanData } from './shows/bojackHorseman';
+import { twentyFour } from './shows/#/24';
+import { thirtyRock } from './shows/#/30Rock';
+import { alias } from './shows/a/alias';
+import { allInTheFamily } from './shows/a/allInTheFamily';
+import { theAmericans } from './shows/a/americans';
+import { archer } from './shows/a/archer';
+import { arrestedDevelopment } from './shows/a/arrestedDevelopment';
+import { avatar } from './shows/a/avatar';
+import { beavisAndButthead } from './shows/b/beavisAndButthead';
+import { betterCallSaul } from './shows/b/betterCallSaul';
+import { bojackHorseman } from './shows/b/bojackHorseman';
+import { breakingBad } from './shows/b/breakingBad';
+import { brooklynNineNine } from './shows/b/brooklynNineNine';
+import { buffyTheVampireSlayer } from './shows/b/buffyTheVampireSlayer';
+import { cheers } from './shows/c/cheers';
+import { community } from './shows/c/community';
+import { theCosbyShow } from './shows/c/cosbyShow';
+import { curbYourEnthusiasm } from './shows/c/curbYourEnthusiasm';
+import { theSimpsons } from './shows/simpsons';
 
-// breaking bad
-// brooklyn nine-nine
-// buffy the vampire slayer
-// chapelles show
-// cheers
-// community
-// the cosby show
-// cowboy bebop
-// curb your enthusiasm
 // deadwood
 // dexter
 // doctor who
@@ -115,42 +113,69 @@ export const data = {
     ...alias,
   },
   'all in the family': {
-    ...allInTheFamilyData,
+    ...allInTheFamily,
   },
   americans: {
-    ...americansData,
+    ...theAmericans,
   },
   archer: {
-    ...archerData,
+    ...archer,
   },
   'arrested development': {
-    ...arrestedDevelopmentData,
+    ...arrestedDevelopment,
   },
   avatar: {
-    ...avatarData,
+    ...avatar,
   },
   'avatar: the last airbender': {
-    ...avatarData,
+    ...avatar,
   },
   'beavis and butthead': {
-    ...beavisAndButtheadData,
+    ...beavisAndButthead,
   },
   'beavis and butt-head': {
-    ...beavisAndButtheadData,
+    ...beavisAndButthead,
   },
   'better call saul': {
-    ...betterCallSaulData,
+    ...betterCallSaul,
   },
   'bojack horseman': {
-    ...bojackHorsemanData,
+    ...bojackHorseman,
+  },
+  'breaking bad': {
+    ...breakingBad,
+  },
+  'brooklyn nine nine': {
+    ...brooklynNineNine,
+  },
+  'brooklyn nine-nine': {
+    ...brooklynNineNine,
+  },
+  'buffy the vampire slayer': {
+    ...buffyTheVampireSlayer,
+  },
+  cheers: {
+    ...cheers,
+  },
+  community: {
+    ...community,
+  },
+  'cosby show': {
+    ...theCosbyShow,
+  },
+  'curb your enthusiasm': {
+    ...curbYourEnthusiasm,
   },
   'the americans': {
-    ...americansData,
+    ...theAmericans,
+  },
+  'the cosby show': {
+    ...theCosbyShow,
   },
   'the simpsons': {
-    ...simpsonsData,
+    ...theSimpsons,
   },
   simpsons: {
-    ...simpsonsData,
+    ...theSimpsons,
   },
 };
