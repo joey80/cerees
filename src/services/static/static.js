@@ -1,4 +1,4 @@
-import { twentyFour } from './shows/#/24';
+import { twentyFour } from './shows/#/24'; // clean
 import { thirtyRock } from './shows/#/30Rock';
 import { alias } from './shows/a/alias';
 import { allInTheFamily } from './shows/a/allInTheFamily';
