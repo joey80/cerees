@@ -668,6 +668,13 @@ export const thirtyRock = {
         imdbID: 'tt1635810',
       },
       {
+        Title: 'Double-Edged Sword',
+        Released: '2011-02-10',
+        Episode: '14',
+        imdbRating: '8.4',
+        imdbID: 'tt1635811',
+      },
+      {
         Title: "It's Never Too Late for Now",
         Released: '2011-02-17',
         Episode: '15',
@@ -964,20 +971,6 @@ export const thirtyRock = {
         Episode: '11',
         imdbRating: '8.5',
         imdbID: 'tt2627896',
-      },
-      {
-        Title: 'Hogcock!/Last Lunch',
-        Released: '2013-01-31',
-        Episode: '12',
-        imdbRating: '9.0',
-        imdbID: 'tt2692790',
-      },
-      {
-        Title: 'Hogcock!',
-        Released: '2013-01-31',
-        Episode: '12',
-        imdbRating: '8.9',
-        imdbID: 'tt2646990',
       },
       {
         Title: 'Hogcock!/Last Lunch',

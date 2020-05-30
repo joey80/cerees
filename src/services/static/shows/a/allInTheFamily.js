@@ -73,7 +73,7 @@ export const allInTheFamily = {
       },
       {
         Title: "Gloria Discovers Women's Lib",
-        Released: 'N/A',
+        Released: '1971-03-16',
         Episode: '11',
         imdbRating: '7.8',
         imdbID: 'tt0758983',
@@ -87,7 +87,7 @@ export const allInTheFamily = {
       },
       {
         Title: 'The First and Last Supper',
-        Released: 'N/A',
+        Released: '1971-04-06',
         Episode: '13',
         imdbRating: '8.5',
         imdbID: 'tt0509934',
@@ -96,7 +96,7 @@ export const allInTheFamily = {
     [
       {
         Title: 'The Saga of Cousin Oscar',
-        Released: 'N/A',
+        Released: '1971-09-18',
         Episode: '1',
         imdbRating: '8.5',
         imdbID: 'tt0509944',
@@ -173,7 +173,7 @@ export const allInTheFamily = {
       },
       {
         Title: "Cousin Maude's Visit",
-        Released: 'N/A',
+        Released: '1971-12-11',
         Episode: '12',
         imdbRating: '8.7',
         imdbID: 'tt0509845',
@@ -187,7 +187,7 @@ export const allInTheFamily = {
       },
       {
         Title: 'The Elevator Story',
-        Released: 'N/A',
+        Released: '1972-01-01',
         Episode: '14',
         imdbRating: '8.5',
         imdbID: 'tt0509932',
@@ -201,7 +201,7 @@ export const allInTheFamily = {
       },
       {
         Title: 'Archie and the F.B.I.',
-        Released: 'N/A',
+        Released: '1972-01-15',
         Episode: '16',
         imdbRating: '8.3',
         imdbID: 'tt0509807',
@@ -222,7 +222,7 @@ export const allInTheFamily = {
       },
       {
         Title: 'Archie and Edith Alone',
-        Released: 'N/A',
+        Released: '1972-02-05',
         Episode: '19',
         imdbRating: '8.3',
         imdbID: 'tt0759041',
@@ -294,7 +294,7 @@ export const allInTheFamily = {
       },
       {
         Title: 'Lionel Steps Out',
-        Released: 'N/A',
+        Released: '1972-10-14',
         Episode: '5',
         imdbRating: '8.4',
         imdbID: 'tt0509885',
@@ -385,7 +385,7 @@ export const allInTheFamily = {
       },
       {
         Title: 'Class Reunion',
-        Released: 'N/A',
+        Released: '1973-02-10',
         Episode: '18',
         imdbRating: '8.4',
         imdbID: 'tt0509843',
@@ -413,7 +413,7 @@ export const allInTheFamily = {
       },
       {
         Title: 'Archie Learns His Lesson',
-        Released: 'N/A',
+        Released: '1973-03-10',
         Episode: '22',
         imdbRating: '8.3',
         imdbID: 'tt0759986',
@@ -513,7 +513,7 @@ export const allInTheFamily = {
       },
       {
         Title: 'Second Honeymoon',
-        Released: 'N/A',
+        Released: '1973-12-01',
         Episode: '12',
         imdbRating: '8.2',
         imdbID: 'tt0509914',
@@ -527,7 +527,7 @@ export const allInTheFamily = {
       },
       {
         Title: 'Archie Is Cursed',
-        Released: 'N/A',
+        Released: '1973-12-15',
         Episode: '14',
         imdbRating: '8.0',
         imdbID: 'tt0759985',
@@ -690,7 +690,7 @@ export const allInTheFamily = {
       },
       {
         Title: "Archie's Contract",
-        Released: 'N/A',
+        Released: '1974-12-07',
         Episode: '13',
         imdbRating: '7.9',
         imdbID: 'tt0509825',
@@ -846,7 +846,7 @@ export const allInTheFamily = {
       },
       {
         Title: 'The Little Atheist',
-        Released: 'N/A',
+        Released: '1975-11-24',
         Episode: '11',
         imdbRating: '8.1',
         imdbID: 'tt0769787',
@@ -860,7 +860,7 @@ export const allInTheFamily = {
       },
       {
         Title: 'Gloria Is Nervous',
-        Released: 'N/A',
+        Released: '1975-12-08',
         Episode: '13',
         imdbRating: '7.7',
         imdbID: 'tt0509873',
@@ -909,7 +909,7 @@ export const allInTheFamily = {
       },
       {
         Title: "Archie's Weighty Problem",
-        Released: 'N/A',
+        Released: '1976-02-09',
         Episode: '20',
         imdbRating: '7.9',
         imdbID: 'tt0509834',
@@ -1072,7 +1072,7 @@ export const allInTheFamily = {
       },
       {
         Title: 'Stretch Cunningham, Goodbye',
-        Released: 'N/A',
+        Released: '1977-01-29',
         Episode: '19',
         imdbRating: '8.2',
         imdbID: 'tt0509918',
@@ -1214,7 +1214,7 @@ export const allInTheFamily = {
       },
       {
         Title: "Edith's Crisis of Faith: Part 2",
-        Released: 'N/A',
+        Released: '1977-12-25',
         Episode: '14',
         imdbRating: '8.3',
         imdbID: 'tt0768869',
@@ -1249,14 +1249,14 @@ export const allInTheFamily = {
       },
       {
         Title: "Two's a Crowd",
-        Released: 'N/A',
+        Released: '1978-02-12',
         Episode: '19',
         imdbRating: '8.6',
         imdbID: 'tt0773322',
       },
       {
         Title: 'Stalemates',
-        Released: 'N/A',
+        Released: '1978-02-19',
         Episode: '20',
         imdbRating: '6.8',
         imdbID: 'tt0509915',
@@ -1349,7 +1349,7 @@ export const allInTheFamily = {
       },
       {
         Title: 'Return of the Waitress',
-        Released: 'N/A',
+        Released: '1978-11-26',
         Episode: '9',
         imdbRating: '7.6',
         imdbID: 'tt0509911',
@@ -1374,13 +1374,6 @@ export const allInTheFamily = {
         Episode: '12',
         imdbRating: '7.8',
         imdbID: 'tt0768867',
-      },
-      {
-        Title: 'California, Here We Are',
-        Released: '1978-12-17',
-        Episode: '12',
-        imdbRating: '7.9',
-        imdbID: 'tt0768866',
       },
       {
         Title: 'A Night at the PTA',
@@ -1454,14 +1447,14 @@ export const allInTheFamily = {
       },
       {
         Title: "The Return of Stephanie's Father",
-        Released: 'N/A',
+        Released: '1979-03-25',
         Episode: '24',
         imdbRating: '8.2',
         imdbID: 'tt0509943',
       },
       {
         Title: 'Too Good Edith',
-        Released: 'N/A',
+        Released: '1979-04-08',
         Episode: '25',
         imdbRating: '8.8',
         imdbID: 'tt0509950',

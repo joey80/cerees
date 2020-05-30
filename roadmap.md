@@ -18,7 +18,6 @@
 - fix season average NaN bug
 - look into season data being undefined (snl, chapelles show)
 - fill in missing episodes in static data
-- '30 Rock' not getting pulled in static search
 
 ## 1.2 - epic/sidebar
 

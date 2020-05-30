@@ -1,9 +1,9 @@
-import { twentyFour } from './shows/#/24'; // clean
+import { twentyFour } from './shows/#/24';
 import { thirtyRock } from './shows/#/30Rock';
 import { alias } from './shows/a/alias';
 import { allInTheFamily } from './shows/a/allInTheFamily';
 import { theAmericans } from './shows/a/americans';
-import { archer } from './shows/a/archer';
+import { archer } from './shows/a/archer'; // clean
 import { arrestedDevelopment } from './shows/a/arrestedDevelopment';
 import { avatar } from './shows/a/avatar';
 import { beavisAndButthead } from './shows/b/beavisAndButthead';
@@ -106,7 +106,7 @@ export const data = {
   '24': {
     ...twentyFour,
   },
-  '30 Rock': {
+  '30 rock': {
     ...thirtyRock,
   },
   alias: {

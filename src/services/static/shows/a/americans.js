@@ -2,6 +2,13 @@ export const theAmericans = {
   results: [
     [
       {
+        Title: 'Pilot',
+        Released: '2013-05-27',
+        Episode: '1',
+        imdbRating: '8.3',
+        imdbID: 'tt2349740',
+      },
+      {
         Title: 'The Clock',
         Released: '2013-02-06',
         Episode: '2',
@@ -402,6 +409,13 @@ export const theAmericans = {
         imdbID: 'tt6261584',
       },
       {
+        Title: 'Crossbreed',
+        Released: '2017-04-11',
+        Episode: '6',
+        imdbRating: '8.1',
+        imdbID: 'tt6261586',
+      },
+      {
         Title: 'The Committee on Human Rights',
         Released: '2017-04-18',
         Episode: '7',
@@ -453,10 +467,10 @@ export const theAmericans = {
     ],
     [
       {
-        Title: 'Episode #6.1',
-        Released: 'N/A',
+        Title: 'Dead Hand',
+        Released: '2018-03-28',
         Episode: '1',
-        imdbRating: 'N/A',
+        imdbRating: '8.9',
         imdbID: 'tt5774876',
       },
       {
@@ -516,10 +530,10 @@ export const theAmericans = {
         imdbID: 'tt6268292',
       },
       {
-        Title: 'Episode #6.10',
-        Released: 'N/A',
+        Title: 'START',
+        Released: '2018-05-30',
         Episode: '10',
-        imdbRating: 'N/A',
+        imdbRating: '9.8',
         imdbID: 'tt5780830',
       },
     ],
