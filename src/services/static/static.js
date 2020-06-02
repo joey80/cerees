@@ -3,10 +3,10 @@ import { thirtyRock } from './shows/#/30Rock';
 import { alias } from './shows/a/alias';
 import { allInTheFamily } from './shows/a/allInTheFamily';
 import { theAmericans } from './shows/a/americans';
-import { archer } from './shows/a/archer'; // clean
+import { archer } from './shows/a/archer';
 import { arrestedDevelopment } from './shows/a/arrestedDevelopment';
 import { avatar } from './shows/a/avatar';
-import { beavisAndButthead } from './shows/b/beavisAndButthead';
+import { beavisAndButthead } from './shows/b/beavisAndButthead'; // clean through last season
 import { betterCallSaul } from './shows/b/betterCallSaul';
 import { bojackHorseman } from './shows/b/bojackHorseman';
 import { breakingBad } from './shows/b/breakingBad';

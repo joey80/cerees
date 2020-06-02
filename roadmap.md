@@ -18,6 +18,7 @@
 - fix season average NaN bug
 - look into season data being undefined (snl, chapelles show)
 - fill in missing episodes in static data
+- have algorithm count through episode numbers and leave n/a
 
 ## 1.2 - epic/sidebar
 
