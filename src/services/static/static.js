@@ -6,9 +6,9 @@ import { theAmericans } from './shows/a/americans';
 import { archer } from './shows/a/archer';
 import { arrestedDevelopment } from './shows/a/arrestedDevelopment';
 import { avatar } from './shows/a/avatar';
-import { beavisAndButthead } from './shows/b/beavisAndButthead'; // clean
+import { beavisAndButthead } from './shows/b/beavisAndButthead';
 import { betterCallSaul } from './shows/b/betterCallSaul';
-import { bojackHorseman } from './shows/b/bojackHorseman';
+import { bojackHorseman } from './shows/b/bojackHorseman'; // clean through season 3
 import { breakingBad } from './shows/b/breakingBad';
 import { brooklynNineNine } from './shows/b/brooklynNineNine';
 import { buffyTheVampireSlayer } from './shows/b/buffyTheVampireSlayer';

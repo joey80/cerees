@@ -2,6 +2,13 @@ export const betterCallSaul = {
   results: [
     [
       {
+        Title: 'Uno',
+        Released: '2015-02-08',
+        Episode: '1',
+        imdbRating: '8.6',
+        imdbID: 'tt3464768',
+      },
+      {
         Title: 'Mijo',
         Released: '2015-02-09',
         Episode: '2',
@@ -188,6 +195,13 @@ export const betterCallSaul = {
         imdbID: 'tt5719542',
       },
       {
+        Title: 'Slip',
+        Released: '2017-06-05',
+        Episode: '8',
+        imdbRating: '8.7',
+        imdbID: 'tt5719546',
+      },
+      {
         Title: 'Fall',
         Released: '2017-06-12',
         Episode: '9',
@@ -344,15 +358,6 @@ export const betterCallSaul = {
         Episode: '10',
         imdbRating: '9.7',
         imdbID: 'tt8772224',
-      },
-    ],
-    [
-      {
-        Title: 'Episode #6.1',
-        Released: 'N/A',
-        Episode: '1',
-        imdbRating: 'N/A',
-        imdbID: 'tt11630814',
       },
     ],
   ],
