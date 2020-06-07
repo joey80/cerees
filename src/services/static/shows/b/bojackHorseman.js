@@ -195,6 +195,13 @@ export const bojackHorseman = {
         imdbID: 'tt5218276',
       },
       {
+        Title: 'BoJack Kills',
+        Released: '2016-07-22',
+        Episode: '3',
+        imdbRating: '7.5',
+        imdbID: 'tt5218432',
+      },
+      {
         Title: 'Fish Out of Water',
         Released: '2016-07-22',
         Episode: '4',
@@ -214,6 +221,13 @@ export const bojackHorseman = {
         Episode: '6',
         imdbRating: '8.1',
         imdbID: 'tt5113952',
+      },
+      {
+        Title: 'Stop the Presses',
+        Released: '2016-07-22',
+        Episode: '7',
+        imdbRating: '8.3',
+        imdbID: 'tt5218452',
       },
       {
         Title: 'Old Acquaintance',
@@ -393,6 +407,13 @@ export const bojackHorseman = {
         Episode: '8',
         imdbRating: '8.5',
         imdbID: 'tt8266834',
+      },
+      {
+        Title: 'Ancient History',
+        Released: '2018-09-14',
+        Episode: '9',
+        imdbRating: '8.3',
+        imdbID: 'tt8266832',
       },
       {
         Title: 'Head in the Clouds',
