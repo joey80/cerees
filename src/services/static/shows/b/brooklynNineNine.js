@@ -2,6 +2,20 @@ export const brooklynNineNine = {
   results: [
     [
       {
+        Title: 'Pilot',
+        Released: '2013-09-17',
+        Episode: '1',
+        imdbRating: '7.8',
+        imdbID: 'tt2936284',
+      },
+      {
+        Title: 'The Tagger',
+        Released: '2013-09-24',
+        Episode: '2',
+        imdbRating: '7.6',
+        imdbID: 'tt3179592',
+      },
+      {
         Title: 'The Slump',
         Released: '2013-10-01',
         Episode: '3',
@@ -35,6 +49,13 @@ export const brooklynNineNine = {
         Episode: '7',
         imdbRating: '8.2',
         imdbID: 'tt3184374',
+      },
+      {
+        Title: 'Old School',
+        Released: '2013-11-12',
+        Episode: '8',
+        imdbRating: '7.8',
+        imdbID: 'tt3215234',
       },
       {
         Title: "Sal's Pizza",
@@ -84,6 +105,13 @@ export const brooklynNineNine = {
         Episode: '15',
         imdbRating: '8.3',
         imdbID: 'tt3468330',
+      },
+      {
+        Title: 'The Party',
+        Released: '2014-02-04',
+        Episode: '16',
+        imdbRating: '8.6',
+        imdbID: 'tt3485608',
       },
       {
         Title: 'Full Boyle',
