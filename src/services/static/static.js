@@ -10,7 +10,7 @@ import { beavisAndButthead } from './shows/b/beavisAndButthead';
 import { betterCallSaul } from './shows/b/betterCallSaul';
 import { bojackHorseman } from './shows/b/bojackHorseman';
 import { breakingBad } from './shows/b/breakingBad';
-import { brooklynNineNine } from './shows/b/brooklynNineNine'; // clean through season 1
+import { brooklynNineNine } from './shows/b/brooklynNineNine'; // clean through season 2
 import { buffyTheVampireSlayer } from './shows/b/buffyTheVampireSlayer';
 import { cheers } from './shows/c/cheers';
 import { community } from './shows/c/community';
