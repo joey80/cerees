@@ -291,6 +291,13 @@ export const brooklynNineNine = {
         imdbID: 'tt4423346',
       },
       {
+        Title: 'AC/DC',
+        Released: '2015-04-26',
+        Episode: '20',
+        imdbRating: '7.8',
+        imdbID: 'tt4526676',
+      },
+      {
         Title: 'Det. Dave Majors',
         Released: '2015-05-03',
         Episode: '21',
