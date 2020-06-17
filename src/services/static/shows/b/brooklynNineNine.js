@@ -370,6 +370,13 @@ export const brooklynNineNine = {
         imdbID: 'tt4371310',
       },
       {
+        Title: 'Ava',
+        Released: '2015-11-22',
+        Episode: '8',
+        imdbRating: '8.2',
+        imdbID: 'tt4371320',
+      },
+      {
         Title: 'The Swedes',
         Released: '2015-12-06',
         Episode: '9',
