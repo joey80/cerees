@@ -16,10 +16,10 @@ import { cheers } from './shows/c/cheers';
 import { community } from './shows/c/community';
 import { theCosbyShow } from './shows/c/cosbyShow';
 import { curbYourEnthusiasm } from './shows/c/curbYourEnthusiasm';
+import { deadwood } from './shows/d/deadwood'; // clean
+import { dexter } from './shows/d/dexter';
 import { theSimpsons } from './shows/simpsons';
 
-// deadwood
-// dexter
 // doctor who
 // downton abbey
 // dr katz
@@ -109,24 +109,18 @@ export const data = {
   '30 rock': {
     ...thirtyRock,
   },
-  alias: {
-    ...alias,
-  },
+  alias,
   'all in the family': {
     ...allInTheFamily,
   },
   americans: {
     ...theAmericans,
   },
-  archer: {
-    ...archer,
-  },
+  archer,
   'arrested development': {
     ...arrestedDevelopment,
   },
-  avatar: {
-    ...avatar,
-  },
+  avatar,
   'avatar: the last airbender': {
     ...avatar,
   },
@@ -154,18 +148,16 @@ export const data = {
   'buffy the vampire slayer': {
     ...buffyTheVampireSlayer,
   },
-  cheers: {
-    ...cheers,
-  },
-  community: {
-    ...community,
-  },
+  cheers,
+  community,
   'cosby show': {
     ...theCosbyShow,
   },
   'curb your enthusiasm': {
     ...curbYourEnthusiasm,
   },
+  deadwood,
+  dexter,
   'the americans': {
     ...theAmericans,
   },

@@ -17,7 +17,8 @@
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
-    "node-sass": "^4.13.1",
+    "imdb-scrapper": "^2.4.0",
+    "node-sass": "^4.14.1",
     "react-bootstrap": "^1.0.0",
     "react-palette": "^1.0.1",
     "semantic-release": "^17.0.7"
@@ -27,7 +28,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "scrape": "node src/services/scraper.service.js"
   },
   "eslintConfig": {
     "extends": "react-app"
