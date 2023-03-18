@@ -1,51 +1,37 @@
 {
   "name": "cerees",
-  "version": "0.0.0-development",
+  "version": "0.1.0",
   "private": true,
-  "release": {
-    "branches": [
-      "release"
-    ]
+  "scripts": {
+    "build": "next build",
+    "build:analyze": "npx cross-env ANALYZE=true next build",
+    "build:docker": "docker build --no-cache -f Dockerfile -t orders:dev .",
+    "dev": "npx cross-env NODE_ENV=development NODE_OPTIONS=--inspect next dev",
+    "format": "npx prettier --write .",
+    "lint": "next lint --dir .",
+    "start": "next start"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "axios": "^0.21.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "axios": "^1.3.4",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "node-sass": "^4.13.1",
-    "react-bootstrap": "^1.0.0",
-    "react-palette": "^1.0.1",
-    "semantic-release": "^17.0.7"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "semantic-release": "semantic-release"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/joey80/cerees.git"
+    "@next/bundle-analyzer": "^13.2.4",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/node": "^18.15.3",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.36.0",
+    "eslint-config-next": "^13.2.4",
+    "eslint-config-prettier": "^8.7.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^5.0.2"
   }
 }
