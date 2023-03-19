@@ -23,4 +23,8 @@ interface IGetSeries {
   Year: string;
 }
 
-export type { IGetSeries };
+interface IGetSeriesData extends Pick<IGetSeries, 'totalSeasons'> {
+  poster: IGetSeries['Poster'];
+}
+
+export type { IGetSeries, IGetSeriesData };

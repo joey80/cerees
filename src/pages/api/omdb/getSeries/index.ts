@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { IGetSeries } from './types';
+import { IGetSeries, IGetSeriesData } from './types';
 
-async function getSeries(req: NextApiRequest, res: NextApiResponse) {
+async function getSeries(req: NextApiRequest, res: NextApiResponse<IGetSeriesData>) {
   const apiURL = new URL(`https://www.omdbapi.com`);
   apiURL.searchParams.set('t', req.body.query);
   apiURL.searchParams.set('type', 'series');

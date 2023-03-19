@@ -12,7 +12,7 @@ async function getSeason(req: NextApiRequest, res: NextApiResponse) {
   const { data } = await axios.get<IGetSeason>(apiURL.toString());
   const { Episodes } = data;
 
-  res.status(200).json({ episodes: Episodes });
+  res.status(200).json(Episodes);
 }
 
 export default getSeason;
