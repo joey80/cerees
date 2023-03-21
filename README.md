@@ -1,6 +1,6 @@
 # Cerees
 
-v0.4.0
+v2.0.0
 
 <!-- ![photos](https://gitlab.com/jobtarget/platform/platformorders/uploads/76ee3948aea5698fccad1a0328d92a85/Screen_Shot_2023-03-06_at_9.54.48_AM.png) -->
 
