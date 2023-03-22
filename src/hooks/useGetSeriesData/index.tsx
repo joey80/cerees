@@ -24,13 +24,27 @@ function seriesReducer(state: IUseGetSeriesDataState, action: Partial<IUseGetSer
 function useGetSeriesData() {
   const [state, dispatch] = useReducer(seriesReducer, defaultState);
 
+  /**
+   * Fetches new series data either from sessionStorage or api and updates
+   * the custom hook state data
+   * @param query - The name of the tv series
+   */
   async function fetchSeriesData(query: string) {
     if (query) {
-      // start loading
-      dispatch({ isLoading: true });
+      // check sessionStorage first
+      const cache = sessionStorage.getItem(query);
 
-      // fetch new data
+      if (cache) {
+        // update state from sessionStorage
+        const { poster, results } = JSON.parse(cache);
+        dispatch({ mostEpisodes: getTheMostEpisodes(results), poster, series: results });
+        return;
+      }
+
+      // start loading, fetch new data and save it to sessionStorage
+      dispatch({ isLoading: true });
       const { poster, results } = await getAllSeasons({ query });
+      sessionStorage.setItem(query, JSON.stringify({ poster, results }));
 
       // stop loading and update state
       dispatch({ isLoading: false, mostEpisodes: getTheMostEpisodes(results), poster, series: results });
