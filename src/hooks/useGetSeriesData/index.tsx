@@ -1,7 +1,8 @@
 import { useReducer } from 'react';
 import { getAllSeasons } from '@/api';
-import { getTheMostEpisodes } from '@/util';
+import { addBlankDataToSeries, getTheMostEpisodes } from '@/util';
 import { IUseGetSeriesDataState } from './types';
+import { IEpisode } from '@/pages/api/omdb/getSeason/types';
 
 const defaultState = {
   isLoading: false,
@@ -25,6 +26,19 @@ function useGetSeriesData() {
   const [state, dispatch] = useReducer(seriesReducer, defaultState);
 
   /**
+   * Compute the most episodes in a single season and add
+   * 'null' to any season that has less than that number
+   * to make each season the same length
+   * @param results - A multi-dimensional array consisting of an array of seasons with all of their episodes
+   */
+  function getComputedResults(results: IEpisode[][]) {
+    const mostEpisodes = getTheMostEpisodes(results);
+    const seriesWithBlanks = addBlankDataToSeries(results, mostEpisodes);
+
+    return { mostEpisodes, seriesWithBlanks };
+  }
+
+  /**
    * Fetches new series data either from sessionStorage or api and updates
    * the custom hook state data
    * @param query - The name of the tv series
@@ -36,8 +50,9 @@ function useGetSeriesData() {
 
       if (cache) {
         // update state from sessionStorage
-        const { poster, results } = JSON.parse(cache);
-        dispatch({ mostEpisodes: getTheMostEpisodes(results), poster, series: results });
+        const { poster, results } = JSON.parse(cache) as { poster: string; results: IEpisode[][] };
+        const { mostEpisodes, seriesWithBlanks } = getComputedResults(results);
+        dispatch({ mostEpisodes, poster, series: seriesWithBlanks });
         return;
       }
 
@@ -47,7 +62,8 @@ function useGetSeriesData() {
       sessionStorage.setItem(query, JSON.stringify({ poster, results }));
 
       // stop loading and update state
-      dispatch({ isLoading: false, mostEpisodes: getTheMostEpisodes(results), poster, series: results });
+      const { mostEpisodes, seriesWithBlanks } = getComputedResults(results);
+      dispatch({ isLoading: false, mostEpisodes, poster, series: seriesWithBlanks });
     }
   }
 

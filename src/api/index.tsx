@@ -2,8 +2,11 @@ import axios from 'axios';
 import { IEpisode } from '@/pages/api/omdb/getSeason/types';
 import { IGetSeriesData } from '@/pages/api/omdb/getSeries/types';
 
-// Gets information about a series and then gets episode data for
-// every season of that series
+/**
+ * Gets information about a series and then gets episode data for
+ * every season of that series
+ * @param query - The name of the tv series
+ */
 async function getAllSeasons({ query }: { query: string }) {
   try {
     const { totalSeasons, poster } = await getSeries({ query });
@@ -24,7 +27,11 @@ async function getAllSeasons({ query }: { query: string }) {
   }
 }
 
-// Gets every episode data for a single season of a series
+/**
+ * Gets every episode data for a single season of a series
+ * @param query - The name of the tv series
+ * @param season - The season number to search
+ */
 async function getSeason({ query, season }: { query: string; season: number }) {
   try {
     const { data } = await axios<IEpisode[]>('/api/omdb/getSeason', { data: { query, season }, method: 'post' });
@@ -35,7 +42,10 @@ async function getSeason({ query, season }: { query: string; season: number }) {
   }
 }
 
-// Gets data about a series
+/**
+ * Gets data about a series
+ * @param query - The name of the tv series
+ */
 async function getSeries({ query }: { query: string }) {
   try {
     const { data } = await axios<IGetSeriesData>('/api/omdb/getSeries', { data: { query }, method: 'post' });

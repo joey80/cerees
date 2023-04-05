@@ -4,7 +4,7 @@ interface IUseGetSeriesDataState {
   isLoading: boolean;
   mostEpisodes: number;
   poster: string;
-  series: IEpisode[][];
+  series: (IEpisode | null)[][];
 }
 
 export type { IUseGetSeriesDataState };
