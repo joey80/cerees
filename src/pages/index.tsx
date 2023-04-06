@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Photos | Joeyui.com</title>
+        <title>Cerees | Joeyui.com</title>
       </Head>
       <main>
         <IndexContainer />
