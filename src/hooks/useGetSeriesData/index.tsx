@@ -1,8 +1,9 @@
 import { useReducer } from 'react';
-import { getAllSeasons } from '@/api';
+import { getAllSeasons, getEpisode } from '@/api';
 import { addBlankDataToSeries, getTheMostEpisodes } from '@/util';
 import { IUseGetSeriesDataState } from './types';
 import { IEpisode } from '@/pages/api/omdb/getSeason/types';
+import { IGetEpisode } from '@/pages/api/omdb/getEpisode/types';
 
 const defaultState = {
   isLoading: false,
@@ -39,35 +40,55 @@ function useGetSeriesData() {
   }
 
   /**
+   * Fetches new single episode data either from sessionStorage or api
+   * @param imdbID - The imdbID for the episode
+   */
+  async function fetchEpisodeData(imdbID: IEpisode['imdbID']) {
+    if (!imdbID) return null;
+
+    // check sessionStorage first
+    const cache = sessionStorage.getItem(imdbID);
+
+    if (cache) {
+      // return the data from sessionStorage
+      return JSON.parse(cache) as IGetEpisode;
+    }
+
+    // fetch the episode data, and save it to sessionStorage
+    const data = await getEpisode({ imdbID });
+    sessionStorage.setItem(imdbID, JSON.stringify(data));
+    return data;
+  }
+
+  /**
    * Fetches new series data either from sessionStorage or api and updates
    * the custom hook state data
    * @param query - The name of the tv series
    */
   async function fetchSeriesData(query: string) {
-    if (query) {
-      // check sessionStorage first
-      const cache = sessionStorage.getItem(query);
+    if (!query) return null;
 
-      if (cache) {
-        // update state from sessionStorage
-        const { poster, results } = JSON.parse(cache) as { poster: string; results: IEpisode[][] };
-        const { mostEpisodes, seriesWithBlanks } = getComputedResults(results);
-        dispatch({ mostEpisodes, poster, series: seriesWithBlanks });
-        return;
-      }
+    // check sessionStorage first
+    const cache = sessionStorage.getItem(query);
 
-      // start loading, fetch new data and save it to sessionStorage
-      dispatch({ isLoading: true });
-      const { poster, results } = await getAllSeasons({ query });
-      sessionStorage.setItem(query, JSON.stringify({ poster, results }));
-
-      // stop loading and update state
-      const { mostEpisodes, seriesWithBlanks } = getComputedResults(results);
-      dispatch({ isLoading: false, mostEpisodes, poster, series: seriesWithBlanks });
+    if (cache) {
+      // update state from sessionStorage
+      const { mostEpisodes, poster, series } = JSON.parse(cache) as IUseGetSeriesDataState;
+      dispatch({ mostEpisodes, poster, series });
+      return;
     }
+
+    // start loading and fetch new data
+    dispatch({ isLoading: true });
+    const { poster, results } = await getAllSeasons({ query });
+
+    // stop loading, update state, and save it to sessionStorage
+    const { mostEpisodes, seriesWithBlanks } = getComputedResults(results);
+    dispatch({ isLoading: false, mostEpisodes, poster, series: seriesWithBlanks });
+    sessionStorage.setItem(query, JSON.stringify({ mostEpisodes, poster, series: seriesWithBlanks }));
   }
 
-  return { ...state, fetchSeriesData };
+  return { ...state, fetchEpisodeData, fetchSeriesData };
 }
 
 export { useGetSeriesData };

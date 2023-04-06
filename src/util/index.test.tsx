@@ -1,6 +1,10 @@
-import { getBlankCellCount, getCellColor, getTheMostEpisodes } from './index';
+import { addBlankDataToSeries, getBlankCellCount, getCellColor, getTheMostEpisodes } from './index';
 import cheersData from './mockData/cheers.json';
 import simpsonsData from './mockData/simpsons.json';
+
+describe('addBlankDataToSeries', () => {
+  it('returns the same length array for every season', () => {});
+});
 
 describe('getBlankCellCount', () => {
   it('returns the correct amount of blank cells needed for that season', () => {

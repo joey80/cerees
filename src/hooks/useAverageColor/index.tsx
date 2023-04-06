@@ -13,6 +13,7 @@ const defaultValues: FastAverageColorResult = {
 
 /**
  * Custom hook that returns the average color from an image
+ * @param link - http link to image src
  */
 function useAverageColor(link: string) {
   const [colorData, setColorData] = useState(defaultValues);
