@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { IGetSeason } from './types';
+import { IEpisode, IGetSeason } from './types';
 
-async function getSeason(req: NextApiRequest, res: NextApiResponse) {
+async function getSeason(req: NextApiRequest, res: NextApiResponse<IEpisode[]>) {
   const apiURL = new URL(`https://www.omdbapi.com`);
   apiURL.searchParams.set('t', req.body.query);
   apiURL.searchParams.set('season', req.body.season);
