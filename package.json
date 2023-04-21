@@ -1,6 +1,6 @@
 {
   "name": "cerees",
-  "version": "2.0.0-alpha.7",
+  "version": "2.0.0-alpha.8",
   "private": true,
   "scripts": {
     "build": "next build",
@@ -17,7 +17,8 @@
     "fast-average-color": "^9.3.0",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-query": "^3.39.3"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.2.4",

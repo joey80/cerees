@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { IEpisode } from '@/pages/api/omdb/getSeason/types';
 import { IGetSeriesData } from '@/pages/api/omdb/getSeries/types';
-import { IGetEpisode } from '@/pages/api/omdb/getEpisode/types';
 
 /**
  * Gets information about a series and then gets episode data for
@@ -25,20 +24,6 @@ async function getAllSeasons({ query }: { query: string }) {
   } catch (error) {
     console.log(error);
     return { results: [], poster: '' };
-  }
-}
-
-/**
- * Gets a single episode data for a series
- * @param imdbID - The imdbID of the episode
- */
-async function getEpisode({ imdbID }: Pick<IEpisode, 'imdbID'>): Promise<IGetEpisode> {
-  try {
-    const { data } = await axios<IGetEpisode>('/api/omdb/getEpisode', { data: { imdbID }, method: 'post' });
-    return data;
-  } catch (error) {
-    console.log(error);
-    return {} as IGetEpisode;
   }
 }
 
@@ -71,4 +56,4 @@ async function getSeries({ query }: { query: string }) {
   }
 }
 
-export { getAllSeasons, getEpisode, getSeason, getSeries };
+export { getAllSeasons, getSeason, getSeries };
