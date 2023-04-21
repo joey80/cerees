@@ -1,9 +1,8 @@
 import { useReducer } from 'react';
-import { getAllSeasons, getEpisode } from '@/api';
+import { getAllSeasons } from '@/api';
 import { addBlankDataToSeries, getTheMostEpisodes } from '@/util';
 import { IUseGetSeriesDataState } from './types';
 import { IEpisode } from '@/pages/api/omdb/getSeason/types';
-import { IGetEpisode } from '@/pages/api/omdb/getEpisode/types';
 
 const defaultState = {
   isLoading: false,
@@ -40,27 +39,6 @@ function useGetSeriesData() {
   }
 
   /**
-   * Fetches new single episode data either from sessionStorage or api
-   * @param imdbID - The imdbID for the episode
-   */
-  async function fetchEpisodeData(imdbID: IEpisode['imdbID']) {
-    if (!imdbID) return null;
-
-    // check sessionStorage first
-    const cache = sessionStorage.getItem(imdbID);
-
-    if (cache) {
-      // return the data from sessionStorage
-      return JSON.parse(cache) as IGetEpisode;
-    }
-
-    // fetch the episode data, and save it to sessionStorage
-    const data = await getEpisode({ imdbID });
-    sessionStorage.setItem(imdbID, JSON.stringify(data));
-    return data;
-  }
-
-  /**
    * Fetches new series data either from sessionStorage or api and updates
    * the custom hook state data
    * @param query - The name of the tv series
@@ -88,7 +66,7 @@ function useGetSeriesData() {
     sessionStorage.setItem(query, JSON.stringify({ mostEpisodes, poster, series: seriesWithBlanks }));
   }
 
-  return { ...state, fetchEpisodeData, fetchSeriesData };
+  return { ...state, fetchSeriesData };
 }
 
 export { useGetSeriesData };
