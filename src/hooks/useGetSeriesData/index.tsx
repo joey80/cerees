@@ -7,7 +7,9 @@ import { IEpisode } from '@/pages/api/omdb/getSeason/types';
 const defaultState = {
   isLoading: false,
   mostEpisodes: 0,
+  overview: '',
   poster: '',
+  providers: {},
   series: [[]],
 };
 
@@ -29,7 +31,7 @@ function useGetSeriesData() {
    * Compute the most episodes in a single season and add
    * 'null' to any season that has less than that number
    * to make each season the same length
-   * @param results - A multi-dimensional array consisting of an array of seasons with all of their episodes
+   * @param results A multi-dimensional array consisting of an array of seasons with all of their episodes
    */
   function getComputedResults(results: IEpisode[][]) {
     const mostEpisodes = getTheMostEpisodes(results);
@@ -39,31 +41,20 @@ function useGetSeriesData() {
   }
 
   /**
-   * Fetches new series data either from sessionStorage or api and updates
+   * Fetches new series data either from Redis or api and updates
    * the custom hook state data
-   * @param query - The name of the tv series
+   * @param query The name of the tv series
    */
   async function fetchSeriesData(query: string) {
     if (!query) return null;
 
-    // check sessionStorage first
-    const cache = sessionStorage.getItem(query);
-
-    if (cache) {
-      // update state from sessionStorage
-      const { mostEpisodes, poster, series } = JSON.parse(cache) as IUseGetSeriesDataState;
-      dispatch({ mostEpisodes, poster, series });
-      return;
-    }
-
     // start loading and fetch new data
     dispatch({ isLoading: true });
-    const { poster, results } = await getAllSeasons({ query });
+    const { overview, poster, providers, results } = await getAllSeasons({ query });
 
-    // stop loading, update state, and save it to sessionStorage
+    // stop loading and update the state
     const { mostEpisodes, seriesWithBlanks } = getComputedResults(results);
-    dispatch({ isLoading: false, mostEpisodes, poster, series: seriesWithBlanks });
-    sessionStorage.setItem(query, JSON.stringify({ mostEpisodes, poster, series: seriesWithBlanks }));
+    dispatch({ isLoading: false, mostEpisodes, overview, poster, providers, series: seriesWithBlanks });
   }
 
   return { ...state, fetchSeriesData };
