@@ -1,39 +1,10 @@
 # Cerees
 
-v2.0.0
+Cerees is an app that allows you to search for any tv show and to be able to see all of the ratings for each episode for all of its seasons. This is a pretty nice way of seeing if the show is worth investing your time in and also at what point in time did the quality in the episodes possibly start to tank. On top of episode ratings it also shows you which streaming platforms you can watch the show on.
 
-<!-- ![photos](https://gitlab.com/jobtarget/platform/platformorders/uploads/76ee3948aea5698fccad1a0328d92a85/Screen_Shot_2023-03-06_at_9.54.48_AM.png) -->
+![photos](https://github.com/joey80/cerees/assets/3519112/a391335f-4d84-442c-9cac-b85261c9c573)
 
-<!-- | Environment | URL                                                                                      |
-| :---------- | :--------------------------------------------------------------------------------------- |
-| QA          | [https://qa-platformsettings.jobtarget.com](https://qa-platformsettings.jobtarget.com)   |
-| UAT         | [https://uat-platformsettings.jobtarget.com](https://uat-platformsettings.jobtarget.com) |
-| Production  | [https://platformsettings.jobtarget.com](https://platformsettings.jobtarget.com)         |
-| Logging     | [Datadog RUM](https://tinyurl.com/settings-dd-rum)                                       |
-| Logging     | [Datadog Trace](https://tinyurl.com/settings-dd-trace)                                   | -->
+## Built With
 
-## Getting Started
-
-### Install and Setup
-
-### How To Run
-
-#### Localhost
-
-Once the project has been installed and the `.env` file has been created and populated, type `npm run start` in the terminal to launch the app in the browser.
-
-#### Docker
-
-To create a container for this repo use this command `npm run build:docker` in the terminal and a docker image will be created.
-
-### Running The Unit Tests
-
-This project uses React Testing Library for the unit tests for the components and also for the custom hooks. It uses Jest for the utility function tests. To run the units tests type `npm run test` in the terminal.
-
-## About The App
-
-### Node
-
-This project uses Node 18. This is set in the `.npmrc` file to ensure packages are installed with that version and also in the `Dockerfile` it uses the `node:18-alpine` image.
-
-### Stack
+- [Next.js](https://nextjs.org/)
+- Typescript

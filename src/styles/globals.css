@@ -2,8 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-.container-bg {
-  background: #201e3c;
+.cell-bg {
+  background: #332938;
+}
+
+.color-great {
+  background: #006d2c;
+}
+
+.color-good {
+  background: #2ca25f;
+}
+
+.color-ok {
+  background: #66c2a4;
+}
+
+.color-yawn {
+  background: #b2e2e2;
+}
+
+.color-bad {
+  background: #de2d26;
+}
+
+.color-not-found {
+  background: #fff;
+}
+
+.color-logo {
+  color: #00c6c1;
+}
+
+.bg-primary {
+  background: #1d2541;
+}
+
+.custom-shadow {
+  box-shadow: 0 0 0.375rem 0.25rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.375rem;
 }
 
 .custom-border-color {

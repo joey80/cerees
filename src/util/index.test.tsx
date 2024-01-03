@@ -3,7 +3,26 @@ import cheersData from './mockData/cheers.json';
 import simpsonsData from './mockData/simpsons.json';
 
 describe('addBlankDataToSeries', () => {
-  it('returns the same length array for every season', () => {});
+  it('returns the same length array for every season', () => {
+    const cheersFirstSet = cheersData.results[0]; // 22 episodes
+    const cheersSecondSet = cheersData.results[2]; // 25 episodes
+    const assert = addBlankDataToSeries([cheersFirstSet, cheersSecondSet], 25);
+
+    // two total series of episodes
+    expect(assert.length).toBe(2);
+    // first set has 25 total entries, matching '25' that was passed in
+    expect(assert[0].length).toBe(25);
+    // seconds set has 25 total entries, matching '25' that was passed in
+    expect(assert[1].length).toBe(25);
+    // confirming that only 22 episodes were present
+    expect(cheersFirstSet.length).toBe(22);
+    // confirming that only 25 episodes were present
+    expect(cheersSecondSet.length).toBe(25);
+    // first set has 3 nulls added to the end since there's only 22 episodes
+    expect(assert[0].filter(elm => elm === null).length).toBe(3);
+    // seconds set has 0 nulls added to the end since there's 25 episodes
+    expect(assert[1].filter(elm => elm === null).length).toBe(0);
+  });
 });
 
 describe('getBlankCellCount', () => {
@@ -28,15 +47,15 @@ describe('getCellColor', () => {
     const assert8 = getCellColor(8.6);
     const assert9 = getCellColor(100);
 
-    expect(assert1).toBe('#006d2c');
-    expect(assert2).toBe('#2ca25f');
-    expect(assert3).toBe('#de2d26');
-    expect(assert4).toBe('#de2d26');
-    expect(assert5).toBe('#fff');
-    expect(assert6).toBe('#66c2a4');
-    expect(assert7).toBe('#b2e2e2');
-    expect(assert8).toBe('#006d2c');
-    expect(assert9).toBe('#006d2c');
+    expect(assert1).toBe('color-great');
+    expect(assert2).toBe('color-good');
+    expect(assert3).toBe('color-bad');
+    expect(assert4).toBe('color-bad');
+    expect(assert5).toBe('color-not-found');
+    expect(assert6).toBe('color-ok');
+    expect(assert7).toBe('color-yawn');
+    expect(assert8).toBe('color-great');
+    expect(assert9).toBe('color-great');
   });
 });
 

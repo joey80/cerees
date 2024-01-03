@@ -27,7 +27,7 @@ function addBlankDataToSeries(arr: IEpisode[][], highestLength: number) {
 function getBlankCellCount(arr: IEpisode[], highestLength: number) {
   if (highestLength === null) return highestLength;
 
-  const total = highestLength - arr.length;
+  const total = highestLength - arr?.length;
   if (total > 0) return total;
 
   return null;
@@ -40,26 +40,26 @@ function getBlankCellCount(arr: IEpisode[], highestLength: number) {
  */
 function getCellColor(imdbRating: number) {
   if (imdbRating >= 8.6) {
-    return '#006d2c';
+    return 'color-great';
   }
 
   if (imdbRating >= 7.6 && imdbRating <= 8.5) {
-    return '#2ca25f';
+    return 'color-good';
   }
 
   if (imdbRating >= 6.6 && imdbRating <= 7.5) {
-    return '#66c2a4';
+    return 'color-ok';
   }
 
   if (imdbRating >= 5.0 && imdbRating <= 6.5) {
-    return '#b2e2e2';
+    return 'color-yawn';
   }
 
   if (imdbRating <= 4.9) {
-    return '#de2d26';
+    return 'color-bad';
   }
 
-  return '#fff';
+  return 'color-not-found';
 }
 
 /**
@@ -68,7 +68,16 @@ function getCellColor(imdbRating: number) {
  */
 function getTheMostEpisodes(arr: IEpisode[][]) {
   const longest = arr.reduce((acc, curr, currIndex, theArr) => (theArr[acc].length > curr.length ? acc : currIndex), 0);
-  return arr[longest].length;
+  return arr?.[longest]?.length;
 }
 
-export { addBlankDataToSeries, getBlankCellCount, getCellColor, getTheMostEpisodes };
+/**
+ * Returns one of the 5 default tv series titles randomly
+ */
+function getRandomTitle() {
+  const presetTitles = ['south park', 'game of thrones', 'friends', 'the walking dead', 'frasier'];
+  const randomIndex = Math.floor(Math.random() * (5 - 1) + 1);
+  return presetTitles[randomIndex - 1];
+}
+
+export { addBlankDataToSeries, getBlankCellCount, getCellColor, getTheMostEpisodes, getRandomTitle };
