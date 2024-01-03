@@ -1,0 +1,42 @@
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+
+  &::after {
+    color: #fff;
+    content: 'seasons \2192';
+    font-size: 12px;
+    left: 70px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 2px;
+  }
+
+  &::before {
+    color: #fff;
+    content: 'episodes\2193';
+    font-size: 12px;
+    left: 1px;
+    position: absolute;
+    text-orientation: upright;
+    text-transform: uppercase;
+    top: 60px;
+    writing-mode: vertical-rl;
+  }
+}
+
+.spinnerContainer {
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  min-width: 115%;
+  transform: translateX(-10%);
+}
+
+.image {
+  @extend .spinnerContainer;
+
+  color: #4c4c6a;
+  filter: grayscale(100%) opacity(45%);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+}

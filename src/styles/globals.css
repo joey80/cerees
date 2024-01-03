@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cell-bg {
+  background: #332938;
+}
+
+.color-great {
+  background: #006d2c;
+}
+
+.color-good {
+  background: #2ca25f;
+}
+
+.color-ok {
+  background: #66c2a4;
+}
+
+.color-yawn {
+  background: #b2e2e2;
+}
+
+.color-bad {
+  background: #de2d26;
+}
+
+.color-not-found {
+  background: #fff;
+}
+
+.color-logo {
+  color: #00c6c1;
+}
+
+.bg-primary {
+  background: #1d2541;
+}
+
+.custom-shadow {
+  box-shadow: 0 0 0.375rem 0.25rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.375rem;
+}
+
+.custom-border-color {
+  border-color: #201e3c;
+}
+
+.svg-body {
+  background-image: url('data:image/svg+xml,%3Csvg%20id%3D%22visual%22%20viewBox%3D%220%200%201980%201200%22%20width%3D%221980%22%20height%3D%221200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%3E%3Cdefs%3E%3Cfilter%20id%3D%22blur1%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22%3E%3C%2FfeFlood%3E%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22shape%22%3E%3C%2FfeBlend%3E%3CfeGaussianBlur%20stdDeviation%3D%22344%22%20result%3D%22effect1_foregroundBlur%22%3E%3C%2FfeGaussianBlur%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%221980%22%20height%3D%221200%22%20fill%3D%22%23121738%22%3E%3C%2Frect%3E%3Cg%20filter%3D%22url(%23blur1)%22%3E%3Ccircle%20cx%3D%221144%22%20cy%3D%22113%22%20fill%3D%22%23D17C78%22%20r%3D%22764%22%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%221889%22%20cy%3D%221082%22%20fill%3D%22%23121738%22%20r%3D%22764%22%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%221564%22%20cy%3D%22186%22%20fill%3D%22%23D17C78%22%20r%3D%22764%22%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%221773%22%20cy%3D%22665%22%20fill%3D%22%23D17C78%22%20r%3D%22764%22%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%22346%22%20cy%3D%22282%22%20fill%3D%22%23121738%22%20r%3D%22764%22%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%221173%22%20cy%3D%22867%22%20fill%3D%22%23D17C78%22%20r%3D%22764%22%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
